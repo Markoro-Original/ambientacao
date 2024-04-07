@@ -1,0 +1,46 @@
+.container {
+  box-sizing: border-box;
+  padding-top: 64px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+}
+
+.info-container {
+  grid-column: 1 / 2;
+}
+
+.listing-container {
+  grid-column: 2 / 4;
+}
+
+.card-2 {
+  padding: 0;
+}
+
+.listing-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.listing-container-line {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.card-2-title-wrapper {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 6px;
+  background: white;
+  color: black;
+}
+
+.card-2-content-wrapper {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  padding: 42px;
+}
