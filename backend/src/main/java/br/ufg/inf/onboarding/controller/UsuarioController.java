@@ -19,10 +19,16 @@ public class UsuarioController {
     private UsuarioRepository usuarioRepository;
 
     @ResponseBody
-    @Transactional
-    @RequestMapping(path = "/usuarios", method = RequestMethod.POST)
+    @RequestMapping(path = "/adicionar", method = RequestMethod.POST)
     public void adicionar(@RequestBody Usuario usuario){
         usuarioRepository.save(usuario);
+    }
+
+    @ResponseBody
+    @RequestMapping("/usuarios")
+    public List<Usuario> listar() {
+        List<Usuario> usuarios = usuarioRepository.findAll();
+        return usuarios;
     }
 
 }
